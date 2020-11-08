@@ -8,6 +8,7 @@ We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-
 ### Instructions:
 Plug in a camera to the Raspberry Pi.
 The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/)
+Install pi-timolo:
 ```
 wget https://raw.github.com/pageauc/pi-timolo/master/source/pi-timolo-install.sh
 chmod +x pi-timolo-install.sh
@@ -18,3 +19,7 @@ Once that is complete, run `sudo raspi-config Interfacing Options` and enable I2
 
 It is recommended to run ```sudo apt-get update && sudo apt-get dist-upgrade```
 and then restart with ```sudo reboot```
+
+To make sure your camera is detected, navigate to the pi-timolo directory and run the .py script
+```cd ./pi-timolo && ./pi-timolo.py```
+"Check the pictures by waving your hand in front of the camera, then looking in Pi-timolo > Media Recent > Motion. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation." [source:](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
