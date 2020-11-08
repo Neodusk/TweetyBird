@@ -8,6 +8,7 @@ We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-
 ### Instructions:
 Plug in a camera to the Raspberry Pi.
 The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/)
+
 Install pi-timolo:
 ```
 wget https://raw.github.com/pageauc/pi-timolo/master/source/pi-timolo-install.sh
