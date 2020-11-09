@@ -26,7 +26,7 @@ To make sure your camera is detected, navigate to the pi-timolo directory and ru
 
 "Check the pictures by waving your hand in front of the camera, then looking in Pi-timolo > Media Recent > Motion. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation" [(source).](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
 
-### Setting up Tweepy 
+## Setting up Tweepy 
 Set up a Twitter account or use an existing one.
 Install Tweepy:
  
@@ -36,7 +36,7 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 - Once your account is approved as a developer account, click on "Keys and Access Tokens".
 - You will need these keys and tokens for the next step
 
-#### Inside of the ~/pi-timolo directory:
+### Inside of the ~/pi-timolo directory:
 - Replace the pi-timolo.py file with the one in this repository
 - Replace the user_motion_code.py with the one in this repository
 - Edit the following user_motion_code.py variable values of 'XXX' with your keys and tokens you setup on Twitter 
