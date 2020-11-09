@@ -60,3 +60,7 @@ Once your project is created and the API is enabled, you should have clicked the
 
 "Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)). Rename the file to `TweetyBird.json` and move the JSON file into your `~/pi-timolo` folder.
 
+## Run It
+At this point you can run the project using `./pi-timolo.py`
+To change the animal tweeted,  "change the line if "bird" in tweetText: animalInPic = true"([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
+
