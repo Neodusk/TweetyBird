@@ -26,7 +26,7 @@ To make sure your camera is detected, navigate to the pi-timolo directory and ru
 
 "Check the pictures by waving your hand in front of the camera, then looking in Pi-timolo > Media Recent > Motion. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation" [(source).](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
 
-### Inside of the ~/pi-timolo directory:
+### Setting up Tweepy - Inside of the ~/pi-timolo directory:
 - Replace the pi-timolo.py file with the one in this repository
 - Replace the user_motion_code.py with the one in this repository
 - Edit the following user_motion_code.py variables 'XXX' with your own secrets 
@@ -36,3 +36,10 @@ To make sure your camera is detected, navigate to the pi-timolo directory and ru
     access_token = ‘XXX’
     access_token_secret = ‘XXX’
 ```
+
+## Google Cloud Vision API
+Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-begin) instructions to create a new project and enable the API and set up authentication
+
+Once your project is created and the API is enabled, you should have clicked the link to Crease service account key.
+
+"Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally. Rename and move the JSON file into your `~/pi-timolo` folder and make a note of the file path. Next, go back to pi-timolo.py and add the line: ```os.environ["GOOGLEAPPLICATIONCREDENTIALS"] = "pathtoyour.jsoncredential_file"``` below import os to reference the credentials in your JSON file" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
