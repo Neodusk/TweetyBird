@@ -3,9 +3,11 @@ Captures pictures of animals and uses AI to detect species. Uploads a capture of
 
 We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition) to help in knowing which libraries might be best for this project and how to go about it. 
 
-# Hardware Needed:
-- Raspberry Pi (We used the 3B), powersource and extra storage
-- A camera for your pi (The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/).)
+# Hardware Used:
+- Raspberry Pi 3B
+- Power cables for the Raspberry Pi
+- SD storage for the Raspberry Pi
+- A Raspberry Pi camera (The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/).)
 
 # Dependencies Required:
 ## pi-timolo
