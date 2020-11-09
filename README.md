@@ -7,7 +7,7 @@ We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-
 - Raspberry Pi 3B
 - Power cables for the Raspberry Pi
 - SD storage for the Raspberry Pi
-- A Raspberry Pi camera (The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/).)
+- A Raspberry Pi [camera](https://www.amazon.com/gp/product/B07JPLV5K1/).
 
 # Dependencies Required:
 ## pi-timolo
