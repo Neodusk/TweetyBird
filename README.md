@@ -31,6 +31,7 @@ Set up a Twitter account or use an existing one.
 Install Tweepy:
  
  ```sudo pip install tweepy```
+ 
 Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 - Click Create an app (you may have to apply for a developer account and this may take some time).
 - Once your account is approved as a developer account, click on "Keys and Access Tokens".
