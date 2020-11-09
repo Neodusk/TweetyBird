@@ -62,5 +62,5 @@ Once your project is created and the API is enabled, you should have clicked the
 
 ## Run It
 At this point you can run the project using `./pi-timolo.py`
-To change the animal tweeted,  "change the line if "bird" in tweetText: animalInPic = true"([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
+To change the animal tweeted,  "change the line `if "bird" in tweetText: animalInPic = true`"([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
 
