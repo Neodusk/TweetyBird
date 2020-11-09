@@ -29,7 +29,7 @@ and then restart with ```sudo reboot```
 To make sure your camera is detected, navigate to the pi-timolo directory and run the .`py` script.
 ```cd ./pi-timolo && ./pi-timolo.py```
 
-"Check the pictures by waving your hand in front of the camera, then looking in Pi-timolo > Media Recent > Motion. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation" [(source).](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
+"Check the pictures by waving your hand in front of the camera, then looking in `~/pi-timolo/media/recent/motion`. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation" [(source).](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
 
 ## Setting up Tweepy 
 Set up a Twitter account or use an existing one.
