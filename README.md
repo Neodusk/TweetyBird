@@ -31,7 +31,11 @@ Set up a Twitter account or use an existing one.
 Install Tweepy:
  
  ```sudo pip install tweepy```
-Go [here](apps.twitter.com) to create a new app and click on "Keys and Access Tokens".
+Go [here](https://developer.twitter.com/apps) to create a new Twitter app
+- Click Create an app (you may have to apply for a developer account and this may take some time).
+- Once your account is approved as a developer account, click on "Keys and Access Tokens".
+- You will need these keys and tokens for the next step
+
 #### Inside of the ~/pi-timolo directory:
 - Replace the pi-timolo.py file with the one in this repository
 - Replace the user_motion_code.py with the one in this repository
