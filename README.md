@@ -58,5 +58,5 @@ Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-
 
 Once your project is created and the API is enabled, you should have clicked the link to Create service account key.
 
-"Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally. Rename the file" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)) to `TweetyBird.json` and move the JSON file into your `~/pi-timolo` folder.
+"Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)). Rename the file to `TweetyBird.json` and move the JSON file into your `~/pi-timolo` folder.
 
