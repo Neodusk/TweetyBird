@@ -29,3 +29,10 @@ To make sure your camera is detected, navigate to the pi-timolo directory and ru
 ### Inside of the ~/pi-timolo directory:
 - Replace the pi-timolo.py file with the one in this repository
 - Replace the user_motion_code.py with the one in this repository
+- Edit the following user_motion_code.py variables 'XXX' with your own secrets 
+```
+    consumer_key = ‘XXX’
+    consumer_secret = ‘XXX’
+    access_token = ‘XXX’
+    access_token_secret = ‘XXX’
+```
