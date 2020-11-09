@@ -1,13 +1,13 @@
 # TweetyBird
 Captures pictures of animals and uses AI to detect species. Uploads a capture of the animal and logs data about the animals appearance
 
-We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition) to help in knowing which libraries might be best for this project.
+We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition) to help in knowing which libraries might be best for this project and how to go about it. 
 
 # Dependencies Required:
 ## pi-timolo
 ### Instructions:
 Plug in a camera to the Raspberry Pi.
-The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/)
+The link for the one used in this project is [here](https://www.amazon.com/gp/product/B07JPLV5K1/).
 
 Install pi-timolo:
 ```
@@ -21,15 +21,21 @@ Once that is complete, run `sudo raspi-config Interfacing Options` and enable I2
 It is recommended to run ```sudo apt-get update && sudo apt-get dist-upgrade```
 and then restart with ```sudo reboot```
 
-To make sure your camera is detected, navigate to the pi-timolo directory and run the .py script
+To make sure your camera is detected, navigate to the pi-timolo directory and run the .`py` script.
 ```cd ./pi-timolo && ./pi-timolo.py```
 
 "Check the pictures by waving your hand in front of the camera, then looking in Pi-timolo > Media Recent > Motion. You may need to change the image size and orientation of the camera; in the Terminal window, enter nano config.py and edit these variables: imageWidth, imageHeight, and imageRotation" [(source).](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)
 
-### Setting up Tweepy - Inside of the ~/pi-timolo directory:
+### Setting up Tweepy 
+Set up a Twitter account or use an existing one.
+Install Tweepy:
+ 
+ ```sudo pip install tweepy```
+Go [here](apps.twitter.com) to create a new app and click on "Keys and Access Tokens".
+#### Inside of the ~/pi-timolo directory:
 - Replace the pi-timolo.py file with the one in this repository
 - Replace the user_motion_code.py with the one in this repository
-- Edit the following user_motion_code.py variables 'XXX' with your own secrets 
+- Edit the following user_motion_code.py variable values of 'XXX' with your keys and tokens you setup on Twitter 
 ```
     consumer_key = ‘XXX’
     consumer_secret = ‘XXX’
@@ -38,7 +44,7 @@ To make sure your camera is detected, navigate to the pi-timolo directory and ru
 ```
 
 ## Google Cloud Vision API
-Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-begin) instructions to create a new project and enable the API and set up authentication
+Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-begin) instructions to create a new project, enable the API and set up authentication
 
 Once your project is created and the API is enabled, you should have clicked the link to Crease service account key.
 
@@ -46,4 +52,4 @@ Once your project is created and the API is enabled, you should have clicked the
 
 ```os.environ["GOOGLEAPPLICATIONCREDENTIALS"] ="pathtoyour.jsoncredential_file"```
 
-below import os to reference the credentials in your JSON file" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
+below `import os` to reference the credentials in your JSON file" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)).
