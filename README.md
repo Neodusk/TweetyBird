@@ -50,7 +50,7 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 ## Google Cloud Vision API
 Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-begin) instructions to create a new project, enable the API and set up authentication
 
-Once your project is created and the API is enabled, you should have clicked the link to Crease service account key.
+Once your project is created and the API is enabled, you should have clicked the link to Create service account key.
 
 "Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally. Rename and move the JSON file into your `~/pi-timolo` folder and make a note of the file path. Next, go back to pi-timolo.py and add the line: 
 ```os.environ["GOOGLEAPPLICATIONCREDENTIALS"] ="pathtoyour.jsoncredential_file"```
