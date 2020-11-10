@@ -1,0 +1,10 @@
+[
+	id: 'string',
+	species: 'string',
+	timestamp: ISOdate,
+	image: {
+	data: Binary,
+	contentType: 'string',
+	desc: 'string'
+	}
+]
