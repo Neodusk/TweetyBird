@@ -1,11 +1,10 @@
 import pymongo
 
+#connection
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-dblist = myclient.list_database_names()
+#DB name creates if does not exist
+mydb = myclient["TweetyBird"]
 
-if "mydatabase" in dblist:
-      print("The database exists.")
-#mydb = myclient["TweetyBird"]
-
-
+#Collection
+mycol = mydb["capture_metadata"]
