@@ -52,7 +52,16 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
     access_token = ‘XXX’
     access_token_secret = ‘XXX’
 ```
+## Pymongo
+Install pymongo using pip:
 
+```sudo pip install pymongo```
+## Database
+NOTE: Database is not created until it gets content (a collection(table) and at least on document(record))
+- Program when ran will set database and collection, if it has been created it would be used as a reference  
+- Once species has been found in camera it will be logged and stored in the collection
+- Go to DB.py found in the database directory to make changes as you see fit
+- To modify what is logged look at user_motion_code.py
 ## Google Cloud Vision API
 Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-begin) instructions to create a new project, enable the API and set up authentication
 
