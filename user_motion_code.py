@@ -1,7 +1,6 @@
 import sys
-sys.path.append('/backend')
+sys.path.insert(1, './database')
 import DB
-
 """
 SOURCE: https://github.com/themagpimag/magpi-issue71/blob/master/WildlifeTrap/listing2.py
 This module will be imported into pi-timolo.py and will
@@ -38,7 +37,6 @@ def userMotionCode(filenamePath):
     labels = response.label_annotations
 
     # we have our labels, now create a string to add to the tweet message
-    # for debugging - let’s see what Google thinks is in the image
     print('Labels:')
     # add labels to our tweet text
     tweetText = "Labels: "
@@ -49,12 +47,13 @@ def userMotionCode(filenamePath):
         # edit this line to change the animal you want to detect
         if "bird" in tweetText: animalInPic = true
 
-    # set up Tweepy
-    # consumer keys and access tokens, used for authorisation
-    consumer_key = ‘XXX’
-    consumer_secret = ‘XXX’
-    access_token = ‘XXX’
-    access_token_secret = ‘XXX’
+    # tweepy
+
+    consumer_key = 'XXX'
+    consumer_key = 'XXX'
+    consumer_secret = 'XXX'
+    access_token = 'XXX'
+    access_token_secret = 'XXX'
 
     # authorisation process, using the keys and tokens
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -68,14 +67,6 @@ def userMotionCode(filenamePath):
     if animalInPic:
         api.update_with_media(photo_path, status=tweetText)
     return
-    #How we hold certain values such as species and data ?
-    #subject to change
-    myAnimal = { 
-        "id": _id, 
-        "species": "bird", 
-        "timestamp": Date.now(), 
-            }
-    mycol.insert_one(myAnimal)
 
     """
     Users can put code here that needs to be run
