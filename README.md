@@ -70,6 +70,7 @@ Once your project is created and the API is enabled, you should have clicked the
 "Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)). Rename the file to `TweetyBird.json` and move the JSON file into your `~/pi-timolo` folder.
 
 Install Google Cloud Vision dependencies:
+
 ```sudo pip install google-cloud-vision && sudo pip install google-cloud-storage```
 
 ## Run It
