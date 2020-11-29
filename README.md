@@ -48,9 +48,7 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 - Edit the following user_motion_code.py variable values of 'XXX' with your keys and tokens you setup on Twitter 
 ```
     consumer_key = ‘XXX’
-    consumer_secret = ‘XXX’
     access_token = ‘XXX’
-    access_token_secret = ‘XXX’
 ```
 ## Pymongo
 Install pymongo using pip:
