@@ -1,0 +1,14 @@
+{
+  "collMod": "Animals",
+  "validator": {
+    "$jsonSchema": {
+      "species": "String",
+      "commonName": "String",
+      "location": {
+        "state": "String",
+        "country": "String",
+        "continent": "String"
+      }
+    }
+  }
+}

@@ -48,9 +48,7 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 - Edit the following user_motion_code.py variable values of 'XXX' with your keys and tokens you setup on Twitter 
 ```
     consumer_key = ‘XXX’
-    consumer_secret = ‘XXX’
     access_token = ‘XXX’
-    access_token_secret = ‘XXX’
 ```
 ## Pymongo
 Install pymongo using pip:
@@ -68,6 +66,10 @@ Follow these [Cloud Vision API](https://cloud.google.com/vision/docs/before-you-
 Once your project is created and the API is enabled, you should have clicked the link to Create service account key.
 
 "Click Create and you’ll be prompted to download a JSON file. You need this as it contains your service account key to allow you to make calls to the API locally" ([source](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition)). Rename the file to `TweetyBird.json` and move the JSON file into your `~/pi-timolo` folder.
+
+Install Google Cloud Vision dependencies:
+
+```sudo pip install google-cloud-vision && sudo pip install google-cloud-storage```
 
 ## Run It
 At this point you can run the project using `./pi-timolo.py`
