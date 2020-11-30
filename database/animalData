@@ -1,0 +1,67 @@
+{
+  {
+    "species": "Sciurus griseus",
+    "commonName": "western gray squirrel",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Sciurus niger",
+    "commonName": "Eastern fox squirrel",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Puma concolor",
+    "commonName": "Mountain Lion",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  
+  {
+    "species": "",
+    "commonName": "Bird",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Felis catus",
+    "commonName": "Cat",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Neotoma",
+    "commonName": "Woodrat",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Procyon lotor",
+    "commonName": "Racoon",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+  {
+    "species": "Canis latrans",
+    "commonName": "Coyote",
+    "location": {
+      "state": "California",
+      "country": "United States of America",
+      "continent": "NA"
+  },
+}
