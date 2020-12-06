@@ -54,8 +54,9 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 ```
 ## Pymongo
 Install pymongo using pip:
-
 ```sudo pip install pymongo```
+Install MongoDB using apt-get:
+```sudo apt-get install mongodb```
 ## Database
 NOTE: Database is not created until it gets content (a collection(table) and at least on document(record))
 - Program when ran will set database and collection, if it has been created it would be used as a reference  
