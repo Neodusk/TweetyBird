@@ -1,6 +1,5 @@
 import pymongo
 import json # parse as a dict
-from collections import OrderedDict
 
 #connection
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")

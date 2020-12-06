@@ -12,7 +12,7 @@ PROG_VER = "ver 12.06"   # Requires Latest 12.0 release of config.py
 __version__ = PROG_VER  # May test for version number at a future time
 
 import os
-os.environ["GOOGLEAPPLICATIONCREDENTIALS"] ="./TweetyBird.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="./TweetyBird.json"
 WARN_ON = False   # Add short delay to review warning messages
 MY_PATH = os.path.abspath(__file__) # Find the full path of this python script
 # get the path location only (excluding script name)
