@@ -1,6 +1,11 @@
 import sys
 sys.path.insert(1, './database')
 import DB
+import io
+import tweepy
+from google.cloud import vision
+from google.cloud.vision import types
+from google.cloud import storage
 """
 SOURCE: https://github.com/themagpimag/magpi-issue71/blob/master/WildlifeTrap/listing2.py
 This module will be imported into pi-timolo.py and will
@@ -19,7 +24,7 @@ For more information see pi-timolo github Wiki
 """
 
 #------------------------------------------------------------------------------
-def userMotionCode(filenamePath):
+def userMotionCode(filename):
     client = storage.Client()
     client = vision.ImageAnnotatorClient()
 
@@ -38,15 +43,17 @@ def userMotionCode(filenamePath):
     for label in labels:
         print(label.description)
         tweetText = tweetText + " " + label.description
-        if "bird" in tweetText: animalInPic = true
+        if "cat" in tweetText:
+            animalInPic = True
 
     # tweepy
-    consumer_key = 'XXX'
-    access_token = 'XXX'
-    
+    consumer_key = "XXXX"
+    consumer_secret = "XXXX"
+    access_token_secret = "XXXX"
+    access_token = "XXXX"
     # authorisation process, using the keys and tokens
-    auth = tweepy.OAuthHandler(consumer_key)
-    auth.set_access_token(access_token)
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
     # creation of the actual interface, using authentication
     api = tweepy.API(auth)
 
@@ -54,21 +61,15 @@ def userMotionCode(filenamePath):
     photo_path = filename
     # only send tweet if it contains a desired animal
     if animalInPic:
-        api.update_with_media(photo_path, status=tweetText)
+      api.update_with_media(photo_path, status=tweetText)
     return
 
     """
     Users can put code here that needs to be run
     after motion detected and image/video taken
     Eg Notify or activate something.
-
     Note all functions and variables will be imported.
     pi-timolo.py will execute this function userMotionCode(filename)
     in pi-timolo.py per example below
-
         user_motion_code.userMotionCode(filename)
-
     """
-    # Insert User code Below
-    # print("User Code Executing from userMotionCode function")
-    # print("file path is %s" % filenamePath)
