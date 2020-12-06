@@ -10,9 +10,3 @@ mydb = myclient["TweetyBird"]
 
 #Collection
 mycol = mydb["capture_metadata"]
-
-# save JSON as a Schema to MongoDB 
-with open('./models/Animal.json', 'r') as j:
-  d = json.loads(j.read())
-d = OrderedDict(d)
-mydb.command(d)
