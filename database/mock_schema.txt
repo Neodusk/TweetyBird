@@ -1,6 +1,7 @@
+// Schema format for unknown motion images
 [
 	id: 'string',
-	species: 'string',
+	labels: 'Array',
 	timestamp: ISOdate,
 	image: {
 	data: Binary,
