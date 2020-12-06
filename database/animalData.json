@@ -72,5 +72,23 @@
             "country": "United States of America",
             "continent": "NA"
         }
+    },
+    {
+        "species": "Cervidae",
+        "commonName": "Deer",
+        "location": {
+            "state": "California",
+            "country": "United States of America",
+            "continent": "NA"
+        }
+    },
+     {
+        "species": "Canis lupus familiaris",
+        "commonName": "Dog",
+        "location": {
+            "state": "California",
+            "country": "United States of America",
+            "continent": "NA"
+        }
     }
 ]
