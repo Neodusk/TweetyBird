@@ -43,14 +43,18 @@ def userMotionCode(filename):
     for label in labels:
         print(label.description)
         tweetText = tweetText + " " + label.description
+        # if SOMEDATABASEDATA in DATABASECOLLECTION:
         if "cat" in tweetText:
             animalInPic = True
+        # else 
+            # store label in separate database collection with timestamp
+            # store image
 
     # tweepy
-    consumer_key = "XXXX"
-    consumer_secret = "XXXX"
-    access_token_secret = "XXXX"
-    access_token = "XXXX"
+    consumer_key = "XXX"
+    consumer_secret = "XXX"    
+    access_token_secret = "XXX"
+    access_token = "XXX"
     # authorisation process, using the keys and tokens
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -62,6 +66,8 @@ def userMotionCode(filename):
     # only send tweet if it contains a desired animal
     if animalInPic:
       api.update_with_media(photo_path, status=tweetText)
+      # if animalNotInDatabase
+      # store animal to database/ log appearance
     return
 
     """
