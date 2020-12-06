@@ -1,5 +1,4 @@
 import pymongo
-import json # parse as a dict
 
 #connection
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
