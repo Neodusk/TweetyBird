@@ -1,11 +1,13 @@
 import sys
 sys.path.insert(1, './database')
-import DB
+from DB import mycol
 import io
 import tweepy
+import base64
 from google.cloud import vision
 from google.cloud.vision import types
 from google.cloud import storage
+from datetime import date
 """
 SOURCE: https://github.com/themagpimag/magpi-issue71/blob/master/WildlifeTrap/listing2.py
 This module will be imported into pi-timolo.py and will
@@ -55,7 +57,7 @@ def userMotionCode(filename):
     consumer_secret = "XXX"    
     access_token_secret = "XXX"
     access_token = "XXX"
-    # authorisation process, using the keys and tokens
+    # authorization process, using the keys and tokens
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     # creation of the actual interface, using authentication
@@ -66,16 +68,16 @@ def userMotionCode(filename):
     # only send tweet if it contains a desired animal
     if animalInPic:
       api.update_with_media(photo_path, status=tweetText)
-      # if animalNotInDatabase
-      # store animal to database/ log appearance
-    return
+    else:
+        with open(filename, "rb") as img_file:
+            encoded_string = base64.b64encode(img_file.read())
+            img = encoded_string
+            unknownMotion = { 	 	
+              "labels": tweetText, 	
+              "timestamp": date.today().strftime('%m/%d/%Y'),
+              "image": {
+              "data": img,
+            }
+        }	
+        mycol.insert_one(unknownMotion)
 
-    """
-    Users can put code here that needs to be run
-    after motion detected and image/video taken
-    Eg Notify or activate something.
-    Note all functions and variables will be imported.
-    pi-timolo.py will execute this function userMotionCode(filename)
-    in pi-timolo.py per example below
-        user_motion_code.userMotionCode(filename)
-    """
