@@ -1,9 +1,11 @@
 import sys
 sys.path.insert(1, './database')
 from DB import mycol
+from DB import animals
 import io
 import tweepy
 import base64
+import json
 from google.cloud import vision
 from google.cloud.vision import types
 from google.cloud import storage
@@ -27,6 +29,9 @@ For more information see pi-timolo github Wiki
 
 #------------------------------------------------------------------------------
 def userMotionCode(filename):
+    with open('./database/animalData.json') as jsonFile:
+        AnimalData = json.load(jsonFile)
+        animals.insert_many(AnimalData);
     client = storage.Client()
     client = vision.ImageAnnotatorClient()
 
@@ -42,22 +47,28 @@ def userMotionCode(filename):
     print('Labels:')
     tweetText = "Labels: "
     animalInPic = False
+    
+    result = animals.find()
+    animalsInDB = ([document["commonName"] for document in result])
+    utf8Animal = [i.encode('UTF8') for i in animalsInDB]
+    uniqueAnimal = set(utf8Animal)
+    uniqueAnimalList = []
+    for ani in uniqueAnimal:
+        uniqueAnimalList.append(ani)
     for label in labels:
         print(label.description)
         tweetText = tweetText + " " + label.description
-        # if SOMEDATABASEDATA in DATABASECOLLECTION:
-        if "cat" in tweetText:
-            animalInPic = True
-        # else 
-            # store label in separate database collection with timestamp
-            # store image
+        for anim in uniqueAnimalList:
+            if anim in tweetText:
+                print("Animal detected!")
+                animalInPic = True
 
     # tweepy
     consumer_key = "XXX"
     consumer_secret = "XXX"    
     access_token_secret = "XXX"
     access_token = "XXX"
-    # authorization process, using the keys and tokens
+    # authorisation process, using the keys and tokens
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     # creation of the actual interface, using authentication
@@ -68,6 +79,8 @@ def userMotionCode(filename):
     # only send tweet if it contains a desired animal
     if animalInPic:
       api.update_with_media(photo_path, status=tweetText)
+      # if animalNotInDatabase
+      # store animal to database/ log appearance
     else:
         with open(filename, "rb") as img_file:
             encoded_string = base64.b64encode(img_file.read())
@@ -80,4 +93,3 @@ def userMotionCode(filename):
             }
         }	
         mycol.insert_one(unknownMotion)
-
