@@ -55,7 +55,7 @@ Go [here](https://developer.twitter.com/apps) to create a new Twitter app
 ## Pymongo
 Install pymongo using pip:
 ```
-sudo pip install pymongo
+sudo pip install pymongo==3.4.0
 ```
 Install MongoDB using apt-get:
 ```
