@@ -1,5 +1,5 @@
 # TweetyBird
-Captures pictures of animals and uses AI to detect species. Uploads a capture of the animal and logs data about the animals appearance
+Captures pictures of animals and uses AI to detect species. Uploads a capture of known animals from a database. Logs data unknown motion captures.
 
 We followed [this guide](https://magpi.raspberrypi.org/articles/wildlife-camera-object-recognition) to help in knowing which libraries might be best for this project and how to go about it. 
 
