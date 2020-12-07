@@ -1,0 +1,108 @@
+MongoDB shell version: 2.4.14
+connecting to: test
+Server has startup warnings: 
+Sun Dec  6 15:06:20.374 [initandlisten] 
+Sun Dec  6 15:06:20.374 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Sun Dec  6 15:06:20.374 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Sun Dec  6 15:06:20.374 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Sun Dec  6 15:06:20.375 [initandlisten] 
+> [3G[Jdb.unknownCaptures.drop()[28G[3G[Jdb.capture_metadata.drop()[29G[3G[Jdb.animals.drop()[20G[3G[Jshow collections[19G[3G[Jdb.Animals.drop()[20G[3G[Juse TweetyBird[17G[3G[Jit[5G[3G[Jdb.animals.find().pretty()[29G[3G[Jshow collections[19G[3G[Juse TweetyBird[17G[3G[Jshow databases[17G[3G[Jshow databases[17G
+TweetyBird	0.0625GB
+local	0.03125GB
+test	(empty)
+> [3G[Jshow databases[17G[3G[Jdb.unknownCaptures.drop()[28G[3G[Jdb.capture_metadata.drop()[29G[3G[Jdb.animals.drop()[20G[3G[Jshow collections[19G[3G[Jdb.Animals.drop()[20G[3G[Juse TweetyBird[17G[3G[Jit[5G[3G[Juse TweetyBird[17G[3G[Juse TweetyBird[17G
+switched to db TweetyBird
+> [3G[Juse TweetyBird[17G[3G[Jshow databases[17G[3G[Jdb.unknownCaptures.drop()[28G[3G[Jdb.capture_metadata.drop()[29G[3G[Jdb.animals.drop()[20G[3G[Jshow collections[19G[3G[Jdb.Animals.drop()[20G[3G[Juse TweetyBird[17G[3G[Jit[5G[3G[Jdb.animals.find().pretty()[29G[3G[Jdb.animals.find().pretty()[29G
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a2"),
+	"commonName" : "western gray squirrel",
+	"species" : "Sciurus griseus",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a3"),
+	"commonName" : "Eastern fox squirrel",
+	"species" : "Sciurus niger",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a4"),
+	"commonName" : "Mountain Lion",
+	"species" : "Puma concolor",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a5"),
+	"commonName" : "Bird",
+	"species" : "",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a6"),
+	"commonName" : "Cat",
+	"species" : "Felis catus",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a7"),
+	"commonName" : "Woodrat",
+	"species" : "Neotoma",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a8"),
+	"commonName" : "Racoon",
+	"species" : "Procyon lotor",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1a9"),
+	"commonName" : "Coyote",
+	"species" : "Canis latrans",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+{
+	"_id" : ObjectId("5fcd80b974fece619520b1aa"),
+	"commonName" : "Deer",
+	"species" : "Cervidae",
+	"location" : {
+		"country" : "United States of America",
+		"state" : "California",
+		"continent" : "NA"
+	}
+}
+}
+
+bye
